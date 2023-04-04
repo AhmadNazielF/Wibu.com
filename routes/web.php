@@ -14,5 +14,9 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('home');
+    return view('createThread');
+});
+
+Route::get('/listThread', function () {
+    return view('listThread');
 });
