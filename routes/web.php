@@ -17,6 +17,10 @@ Route::get('/', function () {
     return view('createThread');
 });
 
+<<<<<<< HEAD
 Route::get('/listSThread', function () {
+=======
+Route::get('/listThread', function () {
+>>>>>>> Fachri-Rozan
     return view('listThread');
 });
