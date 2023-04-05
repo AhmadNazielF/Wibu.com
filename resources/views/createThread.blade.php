@@ -13,7 +13,7 @@
     <div class="sidebar_atas">
       <nav class="sidebar_nav">
         <!-- logo -->
-        <a href="landingpage.blade.php" aria-label="Wibu homepage" class="sidebar_logo">
+        <a href="/" aria-label="Wibu homepage" class="sidebar_logo">
           <svg viewBox="0 0 959 919" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path
               d="M373.929 7C316.197 108.948 299.993 300.354 479.604 453.276C654.725 307.515 639.163 108.948 585.28 7L479.604 50.896L373.929 7Z"
@@ -148,7 +148,7 @@
         <!--link-->
         <div class="sidebar_links">
           <!--Karakter-->
-          <a href="karakterpopuler.html" class="sidebar_link">
+          <a href="/karakterpopuler" class="sidebar_link">
             <div class="sidebar_link-icon">
               <svg width="40" height="40" viewBox="0 0 793 877" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M627 858C627 858 595.606 825.481 554 805" stroke="black" stroke-width="25" />
@@ -187,7 +187,7 @@
             <div class="sidebar_teks-link">KARAKTER POPULER</div>
           </a>
           <!--Anime-->
-          <a href="animepopuler.html" class="sidebar_link">
+          <a href="/animepopuler" class="sidebar_link">
             <div class="sidebar_link-icon">
               <svg width="35" height="35" viewBox="0 25 943 900" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M480.5 571.5L476.5 576.5L476 577.5L489.5 586H491L495 582L480.5 571.5Z" fill="#D9D9D9"
@@ -304,11 +304,11 @@
       <div class="dropdown_register-content">
         <div class="sidebar_register-text"> Tidak punya akun?</div>
         <div class="regis_daftar">
-          <a class="sidebar_teks-link-regis" href="#">Daftar</a>
+          <a class="sidebar_teks-link-regis" href="/register">Daftar</a>
         </div>
         <hr>
         <div class="regis_login">
-          <a id="login" class="sidebar_teks-link-regis" href="#">Login</a>
+          <a id="login" class="sidebar_teks-link-regis" href="/login">Login</a>
         </div>
       </div>
     </div>

@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Register</title>
-    <link rel="stylesheet" type="text/css" href="style2.css">
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/style.css') }}">
     <link rel="icon" href="Logo.png">
   </head>
     <body>
@@ -15,7 +15,7 @@
               <input type="text" placeholder="USER NAME">
               <input type="password" placeholder="PASSWORD">
               <button class="btn_submit" type="submit"> Register </button>
-              <p>Sudah punya akun? <a href="login.html">Sign In</a></p>
+              <p>Sudah punya akun? <a href="/login">Sign In</a></p>
             </div>
           </div>
         </div>

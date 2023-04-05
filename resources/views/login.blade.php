@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Login</title>
-    <link rel="stylesheet" type="text/css" href="style2.css">
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/style.css') }}">
     <link rel="icon" href="Logo.png">
   </head>
     <body>
@@ -14,7 +14,7 @@
               <input type="email" placeholder="EMAIL">
               <input type="password" placeholder="PASSWORD">
               <button class="btn_submit" type="submit"> Login </button>
-              <p>Belum punya akun? <a href="register.html">Sign Up</a></p>
+              <p>Belum punya akun? <a href="/register">Sign Up</a></p>
             </div>
           </div>
         </div>

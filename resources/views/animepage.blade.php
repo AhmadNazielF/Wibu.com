@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Anime Page</title>
-    <link rel="stylesheet" type="text/css" href="style2.css">
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/style.css') }}">
     <link rel="icon" href="Logo.png">
   </head>
     <body>
@@ -12,7 +12,7 @@
           <div class="sidebar_atas">
            <nav class="sidebar_nav">
             <!-- logo -->
-            <a href="landingpage.blade.php" aria-label="Wibu homepage" class="sidebar_logo">
+            <a href="/" aria-label="Wibu homepage" class="sidebar_logo">
               <svg viewBox="0 0 959 919" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M373.929 7C316.197 108.948 299.993 300.354 479.604 453.276C654.725 307.515 639.163 108.948 585.28 7L479.604 50.896L373.929 7Z" fill="white" stroke="white" stroke-width="10"/>
                 <path d="M12.1971 423.205C91.3152 509.615 268.346 584.173 469.286 460.608C384.775 249.016 191.117 202.456 77.5082 222.198L86.6002 336.266L12.1971 423.205Z" fill="white" stroke="white" stroke-width="10"/>
@@ -155,11 +155,11 @@
             <div class="dropdown_register-content">
               <div class="sidebar_register-text"> Tidak punya akun?</div>
               <div class="regis_daftar">
-                  <a class="sidebar_teks-link-regis" href="register.html">Daftar</a>
+                  <a class="sidebar_teks-link-regis" href="/register">Daftar</a>
               </div>
               <hr>
               <div class="regis_login">
-              <a id="login" class="sidebar_teks-link-regis" href="login.html">Login</a>
+              <a id="login" class="sidebar_teks-link-regis" href="/login">Login</a>
               </div>
             </div>
           </div>
