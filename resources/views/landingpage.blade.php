@@ -130,7 +130,11 @@
               <div class="sidebar_teks-link">ANIME POPULER</div>
              </a> 
              <!-- thread-->
+<<<<<<< HEAD
              <a href="/listThread" class="sidebar_link">
+=======
+             <a href="/listSThread" class="sidebar_link">
+>>>>>>> f103472a7822b5117a666c23f67b7584278bb54a
               <div class="sidebar_link-icon">
                 <svg width="40" height="40" viewBox="-50 0 708 964" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M5.43215 950.132C13.0017 933.896 17.7893 929.406 28.3073 925.742L19.4391 922.742L5.43215 950.132Z" stroke="black" stroke-width="10"/>
@@ -159,7 +163,11 @@
               </div>
               <hr>
               <div class="regis_login">
+<<<<<<< HEAD
               <a id="login" class="sidebar_teks-link-regis" href="/login">Login</a>
+=======
+              <a id="login" class="sidebar_teks-link-regis" href="/login">Login</a>"
+>>>>>>> f103472a7822b5117a666c23f67b7584278bb54a
               </div>
             </div>
           </div>
@@ -203,14 +211,14 @@
               <div class="populer_kategori">
                 <div class="kategori_teks">Anime Populer</div>
               </div>
-              <a href="animepopuler.html" class="lebih_banyak">Lebih banyak</a>
+              <a href="/animepopuler" class="lebih_banyak">Lebih banyak</a>
             </div>
             <div class="populer_bawah">
               <a href="#" class="poster">
                 <div class="poster_foto-anime"><img src="foto/aot4.jpeg" alt="" width="170px" height="240"></div>
                 <div class="poster_text">Attack on Titan <br> Season: 4</div>
               </a>
-              <a href="animepage.html" class="poster">
+              <a href="/animepage" class="poster">
                 <div class="poster_foto-anime"><img src="foto/OPM.webp" alt="" width="170px" height="240"></div>
                 <div class="poster_text">One Punch Man</div>
               </a>              
@@ -235,10 +243,10 @@
               <div class="populer_kategori">
                 <div class="kategori_teks">Karakter Populer</div>
               </div>
-              <a href="karakterpopuler.html" class="lebih_banyak">Lebih banyak</a>
+              <a href="/karakterpopuler" class="lebih_banyak">Lebih banyak</a>
             </div>
             <div class="populer_bawah">
-              <a href="karakterpage.html" class="poster">
+              <a href="/karakterpage" class="poster">
                 <div class="poster_foto-karakter">
                   <div class="border">
                   <img src="foto/Saitama.jpeg" alt="" width="170px" height="170px">

@@ -3,12 +3,12 @@
   <head>
     <meta charset="utf-8">
     <title>Anime Page</title>
-    <link rel="stylesheet" type="text/css" href="{{ asset('css/style.css') }}">
+    <link rel="stylesheet" type="text/css" href="css/style2.css">
     <link rel="icon" href="Logo.png">
   </head>
     <body>
-         <!--navigasi-->
-         <div class="sidebar">
+        <!--navigasi-->
+        <div class="sidebar">
           <div class="sidebar_atas">
            <nav class="sidebar_nav">
             <!-- logo -->
@@ -67,7 +67,7 @@
             <!--link-->
             <div class="sidebar_links">
              <!--Karakter-->
-             <a href="karakterpopuler.blade.php" class="sidebar_link">
+             <a href="/karakterpopuler" class="sidebar_link">
               <div class="sidebar_link-icon">
                 <svg width="40" height="40" viewBox="0 0 793 877" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M627 858C627 858 595.606 825.481 554 805" stroke="black" stroke-width="25"/>
@@ -89,7 +89,7 @@
               <div class="sidebar_teks-link">KARAKTER POPULER</div>
              </a> 
              <!--Anime-->
-             <a href="animepopuler.html" class="sidebar_link">
+             <a href="/animepopuler" class="sidebar_link">
               <div class="sidebar_link-icon">
                 <svg width="35" height="35" viewBox="0 25 943 900" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M480.5 571.5L476.5 576.5L476 577.5L489.5 586H491L495 582L480.5 571.5Z" fill="#D9D9D9" fill-opacity="0.03"/>
@@ -130,7 +130,7 @@
               <div class="sidebar_teks-link">ANIME POPULER</div>
              </a> 
              <!-- thread-->
-             <a href="#" class="sidebar_link">
+             <a href="/listSThread" class="sidebar_link">
               <div class="sidebar_link-icon">
                 <svg width="40" height="40" viewBox="-50 0 708 964" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M5.43215 950.132C13.0017 933.896 17.7893 929.406 28.3073 925.742L19.4391 922.742L5.43215 950.132Z" stroke="black" stroke-width="10"/>
@@ -159,7 +159,11 @@
               </div>
               <hr>
               <div class="regis_login">
+<<<<<<< HEAD
               <a id="login" class="sidebar_teks-link-regis" href="/login">Login</a>
+=======
+              <a id="login" class="sidebar_teks-link-regis" href="/login">Login</a>"
+>>>>>>> f103472a7822b5117a666c23f67b7584278bb54a
               </div>
             </div>
           </div>
@@ -220,7 +224,7 @@
                 <div class="galery_bawah">
                   <div class="block"></div>
                   <div class="galery_bawah-content">
-                    <a href="karakterpage.html" class="poster">
+                    <a href="/karakterpage" class="poster">
                         <div class="poster_foto-karakter"><img src="foto/Saitama.jpeg" alt="" width="173" height="166"></div>
                         <div class="poster_teks">
                           <div class="poster_foto-karakter-teks__nama">Nama : Saitama</div>
