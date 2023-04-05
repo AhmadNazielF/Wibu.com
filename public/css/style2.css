@@ -813,3 +813,251 @@ input{
 .input_akun p{
     text-align: center;
 }
+
+* isi thread */
+.thread-body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    width: 924px;
+    height: 190px;
+}
+
+.thread-header {
+    background-color: #ffffff;
+    padding: 10px;
+    width: 904px;
+    height: 138px;
+    border-bottom: 1px solid #cccccc;
+}
+
+.thread-h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.thread-article {
+    margin: 0;
+    font-size: 24px;
+}
+
+.thread-article2 {
+    margin: 0;
+    font-size: 24px;
+    border-bottom: 1px solid #cccccc;
+}
+
+.thread-button {
+    background-color: #bd1e1e;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    width: 50px;
+    height: 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    text-align: center;
+    position: relative;
+}
+
+.thread-button:hover {
+    background-color: #bd1e1e;
+}
+
+.thread-teks-uname {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    width: 904px;
+    height: 50px;
+    padding: 10px;
+}
+
+.thread-balasan {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    width: 166px;
+    height: 66px;
+}
+
+.thread-komen input[type="text"] {
+    width: 1271px;
+    height: 315px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    background-color: #ffffff;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+}
+
+.comment-box input[type="text"] {
+    width: 1271px;
+    height: 315px;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    margin-bottom: 10px;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    text-align: left;
+}
+
+#comment-box1 {
+    background-color: #f7f7f7;
+    position: relative;
+    width: 1271px;
+    height: 315px;
+    padding: 20px;
+    color: rgb(0, 0, 0);
+}
+
+/* 
+#comment-box1::after {
+	content: "uidbiudbiu";
+	position: absolute;
+	height: 25px;
+	width: 25px;
+	bottom: -25px;
+	left: 90%;
+	background-color: #f3f4f7;
+	clip-path: polygon(0 0, 100% 0, 100% 100%);
+} */
+.thread-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    background-color: #ffffff;
+    position: relative;
+}
+
+.thread-list li {
+    border-bottom: 1px solid #ddd;
+    padding: 20px;
+}
+
+.thread-list li:last-child {
+    border-bottom: none;
+}
+
+.thread-list li h3 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.thread-list li h3 a {
+    color: #333;
+    text-decoration: none;
+}
+
+.thread-list li p.thread-description {
+    margin: 10px 0;
+}
+
+.thread-list li p.thread-meta {
+    font-style: italic;
+    color: #999;
+    margin: 0;
+}
+
+.thread-button-start {
+    background-color: #bd1e1e;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    width: 80px;
+    height: 50px;
+    cursor: pointer;
+    border-radius: 5px;
+    text-align: center;
+    position: relative;
+}
+
+.thread-header-list {
+    background-color: #ffffff;
+    padding: 10px;
+    /* width: 904px;
+        height: 138px; */
+    border-bottom: 1px solid #cccccc;
+}
+
+.text-create-thread {
+    font: arial;
+    font-size: 36px;
+    color: #fff;
+}
+
+.create-thread {
+    background-color: #f7f7f7;
+    position: relative;
+    width: 1271px;
+    height: 315px;
+    padding: 20px;
+}
+
+#comment-box2 {
+    background-color: #f7f7f7;
+    position: relative;
+    width: 1252px;
+    height: 104px;
+    padding: 20px;
+    color: rgb(0, 0, 0);
+}
+
+#comment-box3 {
+    background-color: #f7f7f7;
+    position: relative;
+    width: 1252px;
+    height: 315px;
+    padding: 20px;
+    color: rgb(0, 0, 0);
+}
+
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    z-index: 1;
+}
+
+.dropdown-content a {
+    display: block;
+    padding: 10px;
+    text-decoration: none;
+    color: black;
+    background-color: white;
+    stroke: black;
+    width: 502px;
+    height: 102px;
+    text-align: left;
+    border-bottom: 2px solid transparent;
+    border-color: black;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropbtn {
+    background-color: #ffffff;
+    color: black;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    width: 522px;
+    height: 102px;
+    text-align: left;
+    border-bottom: 2px solid transparent;
+    border-color: black;
+}
+
+.dropbtn:hover {
+    background-color: #ffffff;
+}
+
+.thread_layout-page {
+    display: flex;
+}

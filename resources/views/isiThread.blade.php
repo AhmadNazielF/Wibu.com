@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <title>Isi Thread</title>
-    <link rel="stylesheet" type="text/css" href="{{ asset('css/style.css') }}">
+    <link rel="stylesheet" type="text/css" href="'css/style2.css'">
 </head>
 
 <body>

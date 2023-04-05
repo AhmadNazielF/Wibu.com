@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <title>List Thread</title>
-    <link rel="stylesheet" type="text/css" href="{{ asset('css/style.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/style2.css') }}">
 </head>
 
 <body>
