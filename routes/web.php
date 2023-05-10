@@ -14,5 +14,36 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('home');
+    return view('landingpage');
 });
+
+Route::get('/listSThread', function () {
+    return view('listThread');
+});
+
+Route::get('/animepage', function () {
+    return view('animepage');
+});
+
+Route::get('/animepopuler', function () {
+    return view('animepopuler');
+});
+
+Route::get('/karakterpage', function () {
+    return view('karakterpage');
+});
+
+Route::get('/karakterpopuler', function () {
+    return view('karakterpopuler');
+});
+
+Route::get('/login', function () {
+    return view('login');
+});
+
+Route::get('/register', function () {
+    return view('register');
+});
+
+
+
