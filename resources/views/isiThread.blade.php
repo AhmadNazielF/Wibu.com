@@ -154,6 +154,16 @@
               </div>
             </div>
             <div class="dropdown_register-content">
+<<<<<<< HEAD
+                <div class="sidebar_register-text"> Tidak punya akun?</div>
+                <div class="regis_daftar">
+                    <a class="sidebar_teks-link-regis" href="/register">Daftar</a>
+                </div>
+                <hr>
+                <div class="regis_login">
+                    <a id="login" class="sidebar_teks-link-regis" href="/login">Login</a>
+                </div>
+=======
               <div class="sidebar_register-text"> Tidak punya akun?</div>
               <div class="regis_daftar">
                   <a class="sidebar_teks-link-regis" href="/register">Daftar</a>
@@ -162,6 +172,7 @@
               <div class="regis_login">
               <a id="login" class="sidebar_teks-link-regis" href="/login">Login</a>"
               </div>
+>>>>>>> f103472a7822b5117a666c23f67b7584278bb54a
             </div>
           </div>
        </div>

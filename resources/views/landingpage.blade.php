@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Landing Page</title>
-    <link rel="stylesheet" type="text/css" href="css/style2.css">
+    <link rel="stylesheet" type="text/css" href="{{ asset('css/style.css') }}">
     <link rel="icon" href="Logo.png">
   </head>
     <body>
@@ -130,7 +130,11 @@
               <div class="sidebar_teks-link">ANIME POPULER</div>
              </a> 
              <!-- thread-->
+<<<<<<< HEAD
+             <a href="/listThread" class="sidebar_link">
+=======
              <a href="/listSThread" class="sidebar_link">
+>>>>>>> f103472a7822b5117a666c23f67b7584278bb54a
               <div class="sidebar_link-icon">
                 <svg width="40" height="40" viewBox="-50 0 708 964" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M5.43215 950.132C13.0017 933.896 17.7893 929.406 28.3073 925.742L19.4391 922.742L5.43215 950.132Z" stroke="black" stroke-width="10"/>
@@ -159,7 +163,11 @@
               </div>
               <hr>
               <div class="regis_login">
+<<<<<<< HEAD
+              <a id="login" class="sidebar_teks-link-regis" href="/login">Login</a>
+=======
               <a id="login" class="sidebar_teks-link-regis" href="/login">Login</a>"
+>>>>>>> f103472a7822b5117a666c23f67b7584278bb54a
               </div>
             </div>
           </div>

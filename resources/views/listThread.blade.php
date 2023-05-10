@@ -154,14 +154,14 @@
               </div>
             </div>
             <div class="dropdown_register-content">
-              <div class="sidebar_register-text"> Tidak punya akun?</div>
-              <div class="regis_daftar">
-                  <a class="sidebar_teks-link-regis" href="/register">Daftar</a>
-              </div>
-              <hr>
-              <div class="regis_login">
-              <a id="login" class="sidebar_teks-link-regis" href="/login">Login</a>"
-              </div>
+                <div class="sidebar_register-text"> Tidak punya akun?</div>
+                <div class="regis_daftar">
+                    <a class="sidebar_teks-link-regis" href="#">Daftar</a>
+                </div>
+                <hr>
+                <div class="regis_login">
+                    <a id="login" class="sidebar_teks-link-regis" href="#">Login</a>
+                </div>
             </div>
           </div>
        </div>
@@ -170,7 +170,7 @@
         <div class="thread-header-list">
             <div class="thread-h1">All Thread</div>
         </div><br>
-    <a href="createThread.html"><div class="thread-button-start"> Start thread </div></a><br>
+    <a href="/createThread"><div class="thread-button-start"> Start thread </div></a><br>
     <ul class="thread-list">
         <li>
           <h3><a href="isiThread.html">Judul Thread Pertama</a></h3>
