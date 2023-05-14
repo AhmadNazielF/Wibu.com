@@ -20,7 +20,7 @@ Route::get('/', function () {
     return view('landingpage');
 });
 
-Route::get('/listSThread', function () {
+Route::get('/listThread', function () {
     return view('listThread');
 });
 

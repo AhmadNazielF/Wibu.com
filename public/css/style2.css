@@ -7,7 +7,6 @@ a{
 	text-decoration: none !important;
 }
 
-.container
 
 .lebih_banyak{
     text-align: right;
@@ -817,8 +816,6 @@ input{
 .input_akun p{
     text-align: center;
 }
-
-* isi thread */
 .thread-body {
     font-family: Arial, sans-serif;
     background-color: #f2f2f2;
