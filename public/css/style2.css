@@ -2,9 +2,12 @@ body{
     background-color: #272727;
     margin-left: 83px;
 }
+
 a{
-	text-decoration: none;
+	text-decoration: none !important;
 }
+
+.container
 
 .lebih_banyak{
     text-align: right;

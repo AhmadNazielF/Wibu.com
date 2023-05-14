@@ -1,5 +1,8 @@
 <?php
 
+use App\Http\Controllers\LoginController;
+use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\HomePageController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -50,4 +53,14 @@ Route::get('/homepage', function () {
 });
 
 
+Route::get('/test', function () {
+    return view('test');
+});
 
+route::get('/test', [HomePageController::class, 'index']);
+
+route::get('/login', [LoginController::class, 'index'])->middleware('guest');
+route::post('/login', [LoginController::class, 'authenticated']);
+
+route::get('/register', [RegisterController::class, 'index']);
+route::post('/register', [RegisterController::class, 'store']);

@@ -5,9 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Landing Page</title>
     <link rel="stylesheet" type="text/css" href="css/style2.css">
+    @vite(['resources/sass/app.scss','resources/js/app.js'])
     <link rel="icon" href="favicon.ico">
   </head>
-    <body>
+    <body class="bg-dark bg ">
         <!--navigasi-->
         <div class="sidebar">
           <div class="sidebar_atas">
