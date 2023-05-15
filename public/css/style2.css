@@ -1,10 +1,12 @@
 body{
-    background-color: #272727;
+    background-color: rgb(39, 39, 39);
     margin-left: 83px;
 }
+
 a{
-	text-decoration: none;
+	text-decoration: none !important;
 }
+
 
 .lebih_banyak{
     text-align: right;
@@ -173,7 +175,7 @@ a{
 .regis_daftar{
     background-color: #bd1e1e;
     border: 2px solid transparent;
-    border-color: #bd1e1e;
+    border-color: rgb(189, 30, 30);
     width: 170px;
     height: 30px;
     margin: auto;
@@ -264,6 +266,7 @@ a{
 .container_thread-populer{
     display: flex;
     height: auto;
+    margin: auto;
 }
 
 /*popular*/

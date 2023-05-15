@@ -2,11 +2,13 @@
 <html>
   <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Landing Page</title>
-    <link rel="stylesheet" type="text/css" href="{{ asset('css/style.css') }}">
-    <link rel="icon" href="Logo.png">
+    <link rel="stylesheet" type="text/css" href="css/style2.css">
+    @vite(['resources/sass/app.scss','resources/js/app.js'])
+    <link rel="icon" href="favicon.ico">
   </head>
-    <body>
+    <body class="bg-dark bg ">
         <!--navigasi-->
         <div class="sidebar">
           <div class="sidebar_atas">
@@ -130,11 +132,7 @@
               <div class="sidebar_teks-link">ANIME POPULER</div>
              </a> 
              <!-- thread-->
-<<<<<<< HEAD
              <a href="/listThread" class="sidebar_link">
-=======
-             <a href="/listSThread" class="sidebar_link">
->>>>>>> f103472a7822b5117a666c23f67b7584278bb54a
               <div class="sidebar_link-icon">
                 <svg width="40" height="40" viewBox="-50 0 708 964" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <path d="M5.43215 950.132C13.0017 933.896 17.7893 929.406 28.3073 925.742L19.4391 922.742L5.43215 950.132Z" stroke="black" stroke-width="10"/>
