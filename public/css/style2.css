@@ -1,5 +1,5 @@
 body{
-    background-color: #272727;
+    background-color: rgb(39, 39, 39);
     margin-left: 83px;
 }
 
@@ -175,7 +175,7 @@ a{
 .regis_daftar{
     background-color: #bd1e1e;
     border: 2px solid transparent;
-    border-color: #bd1e1e;
+    border-color: rgb(189, 30, 30);
     width: 170px;
     height: 30px;
     margin: auto;

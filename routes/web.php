@@ -52,6 +52,9 @@ Route::get('/homepage', function () {
     return view('homepage');
 });
 
+Route::get('/dashboard', function () {
+    return view('dashboard.index');
+})->middleware('auth');;
 
 Route::get('/test', function () {
     return view('test');
@@ -59,8 +62,9 @@ Route::get('/test', function () {
 
 route::get('/test', [HomePageController::class, 'index']);
 
-route::get('/login', [LoginController::class, 'index'])->middleware('guest');
+route::get('/login', [LoginController::class, 'index'])->name('login')->middleware('guest');
 route::post('/login', [LoginController::class, 'authenticated']);
+route::post('/logout', [LoginController::class, 'logout']);
 
-route::get('/register', [RegisterController::class, 'index']);
+route::get('/register', [RegisterController::class, 'index'])->middleware('guest');
 route::post('/register', [RegisterController::class, 'store']);

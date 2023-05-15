@@ -161,9 +161,12 @@
                   <a class="sidebar_teks-link-regis" href="/register">Dashboard</a>
               </div>
               <hr>
-              <div class="regis_login">
-              <a id="login" class="sidebar_teks-link-regis" href="/login">Log out</a>"
-              </div>
+              <form action="logout" method="post">
+                @csrf
+                <button type="submit" class="regis_login">
+                  <p id="login" class="sidebar_teks-link-regis">Log out</p>
+                </button>
+              </form>
             </div>
             @else
             <div class="dropdown_register-content">
