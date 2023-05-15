@@ -36,10 +36,12 @@ class LoginController extends Controller
     // Proses logout
     public function logout(Request $request)
     {
-        $this->guard()->logout();
+        Auth::logout();
 
         $request->session()->invalidate();
-
+    
+        $request->session()->regenerateToken();
+    
         return redirect('/');
     }
 }
