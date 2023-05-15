@@ -143,7 +143,6 @@
                 <div class="sidebar_teks-link">THREAD</div>
              </a> 
             </div>
-<<<<<<< HEAD
             <div class="sidebar_teks-link">KARAKTER POPULER</div>
           </a>
           <!--Anime-->
@@ -226,17 +225,6 @@
                   d="M592.569 81.8322L515.869 246.451M600.876 99.5202L573.682 86.8502C556.411 78.8032 549.219 57.6664 557.618 39.6399C566.017 21.6134 586.827 13.5234 604.098 21.5705L631.291 34.2405C648.562 42.2875 655.754 63.4243 647.355 81.4508C638.956 99.4773 618.147 107.567 600.876 99.5202Z"
                   stroke="black" stroke-width="35" />
               </svg>
-=======
-            </nav>   
-          </div>
-          <div class="sidebar_bawah">
-            <div class="dropdown_register">
-              <div class="sidebar_register">
-                <svg xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" viewBox="0 0 29 29" id="user">
-                  <path d="M14.5 2A12.514 12.514 0 0 0 2 14.5 12.521 12.521 0 0 0 14.5 27a12.5 12.5 0 0 0 0-25Zm7.603 19.713a8.48 8.48 0 0 0-15.199.008A10.367 10.367 0 0 1 4 14.5a10.5 10.5 0 0 1 21 0 10.368 10.368 0 0 1-2.897 7.213ZM14.5 7a4.5 4.5 0 1 0 4.5 4.5A4.5 4.5 0 0 0 14.5 7Z"/>
-                </svg>
-              </div>
->>>>>>> f103472a7822b5117a666c23f67b7584278bb54a
             </div>
             <div class="dropdown_register-content">
               <div class="sidebar_register-text"> Tidak punya akun?</div>
@@ -248,7 +236,6 @@
               <a id="login" class="sidebar_teks-link-regis" href="/login">Login</a>"
               </div>
             </div>
-<<<<<<< HEAD
             <div class="sidebar_teks-link">THREAD</div>
           </a>
         </div>
@@ -275,10 +262,6 @@
       </div>
     </div>
   </div>
-=======
-          </div>
-       </div>
->>>>>>> f103472a7822b5117a666c23f67b7584278bb54a
   <!-- create thread -->
   <div>
   <div class="text-create-thread">Thread Category</div>

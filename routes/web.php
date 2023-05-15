@@ -59,6 +59,10 @@ Route::get('/dashboard', function () {
 Route::get('/test', function () {
     return view('test');
 });
+Route::get('/createThread', function () {
+    return view('createThread');
+});
+
 
 route::get('/test', [HomePageController::class, 'index']);
 

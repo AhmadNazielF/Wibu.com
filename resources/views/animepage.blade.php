@@ -159,11 +159,7 @@
               </div>
               <hr>
               <div class="regis_login">
-<<<<<<< HEAD
               <a id="login" class="sidebar_teks-link-regis" href="/login">Login</a>
-=======
-              <a id="login" class="sidebar_teks-link-regis" href="/login">Login</a>"
->>>>>>> f103472a7822b5117a666c23f67b7584278bb54a
               </div>
             </div>
           </div>
