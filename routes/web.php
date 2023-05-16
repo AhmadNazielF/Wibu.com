@@ -3,6 +3,11 @@
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\HomePageController;
+use App\Http\Controllers\LandingPageController;
+use App\Http\Controllers\AnimePageController;
+use App\Http\Controllers\KarakterPageController;
+use App\Http\Controllers\AnimePopulerController;
+use App\Http\Controllers\KarakterPopulerController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -61,6 +66,16 @@ Route::get('/test', function () {
 });
 
 route::get('/test', [HomePageController::class, 'index']);
+
+route::get('/', [LandingPageController::class, 'index']);
+
+route::get('animepage', [AnimePageController::class, 'index']);
+
+route::get('karakterpage', [KarakterPageController::class, 'index']);
+
+route::get('animepopuler', [AnimePopulerController::class, 'index']);
+
+route::get('karakterpopuler', [KarakterPopulerController::class, 'index']);
 
 route::get('/login', [LoginController::class, 'index'])->name('login')->middleware('guest');
 route::post('/login', [LoginController::class, 'authenticated']);
