@@ -66,7 +66,7 @@
       }
 
       .bg-red{
-        background-color:rgb(189, 30, 30);
+        --bs-card-bg:rgb(189, 30, 30);
       }
       
       .navbar-brand{

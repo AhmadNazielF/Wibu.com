@@ -10,4 +10,12 @@ class character extends Model
     use HasFactory;
     protected $table = 'characters';
     protected $fillable = ['nama','slug','role','umur','status','gender','tinggi','deskripsi','penampilan','sejarah','image'];
+    public function anime()
+    {
+        return $this->belongsTo(anime::class);
+    }
+    public function fanart()
+    {
+        return $this->hasMany(fanart::class);
+    }
 }

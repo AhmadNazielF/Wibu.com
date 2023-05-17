@@ -10,4 +10,8 @@ class anime extends Model
     use HasFactory;
     protected $table = 'animes';
     protected $fillable = ['judul','slug','judul_alternatif','genre','status','ratings','jumlah_episode','studio','tahun_tayang','sinopsis','image'];
+    public function character()
+    {
+        return $this->hasMany(character::class);
+    }
 }
