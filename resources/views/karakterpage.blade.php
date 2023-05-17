@@ -3,11 +3,13 @@
 @section('container')
    <!--Karakter page-->
    <div class="karakter-page_layout">
-    <div class="block_karakter"></div>
+    <div class="block_karakter">
+      <p id="title" >One Punch Man</p>
+    </div>
     <div class="karakter_page">
       <!--informasi karakter-->
       <div class="karakter_informasi">
-        <div class="karakter_informasi-singkat">
+        <div class="karakter_informasi-singkat mt-5">
           <p>Saitama (サイタマ, Saitama) adalah protagonis utama dalam seri dan judul One-Punch Man. Dia saat ini adalah makhluk paling kuat yang ada dalam seri tersebut. Saitama menghadapi krisis eksistensial yang diimpose sendiri, karena dia sekarang terlalu kuat untuk mendapatkan sensasi dari pertarungan.</p>
           <p>Awalnya hanya menjadi pahlawan untuk bersenang-senang, Saitama kemudian mendaftar menjadi pahlawan profesional untuk Asosiasi Pahlawan setelah menyadari bahwa tidak ada yang mengakui dirinya sebagai pahlawan, dan membela rumahnya di Z-City dari monster, penjahat, dan ancaman lainnya. Di bawah Asosiasi Pahlawan, dia diberi nama pahlawan Caped Baldy (ハゲマント, Hagemanto; Viz: Bald Cape) dan saat ini berada di peringkat A-Class Rank 39.</p>
         </div>
@@ -26,8 +28,8 @@
         </div>
       </div>
       <div class="karakter_profile">
-        <div class="block_karakter">
-          <div class="karakter_informasi-text">Saitama</div>
+        <div class="block_karakter karakter_informasi-text">
+          Saitama
         </div>
         <div class="karakter_profile-foto"><img src="foto/Saitama.jpeg" alt="" width="270px" height="270px"></div>
         <div class="karakter_profile-content_layout">

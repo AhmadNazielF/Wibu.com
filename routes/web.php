@@ -6,8 +6,8 @@ use App\Http\Controllers\HomePageController;
 use App\Http\Controllers\LandingPageController;
 use App\Http\Controllers\AnimePageController;
 use App\Http\Controllers\KarakterPageController;
-use App\Http\Controllers\AnimePopulerController;
-use App\Http\Controllers\KarakterPopulerController;
+use App\Http\Controllers\AnimeController;
+use App\Http\Controllers\KarakterController;
 use App\Http\Controllers\ThreadController;
 use Illuminate\Support\Facades\Route;
 
@@ -32,11 +32,13 @@ Route::get('/isithread', [ThreadController::class, 'isi']);
 Route::get('/comment', [ThreadController::class, 'comment']);
 
 Route::get('/animepage', function () {
-    return view('animepage');
+    return view('animepage',);
 });
 
 Route::get('/animepopuler', function () {
-    return view('animepopuler');
+    return view('animepopuler',[
+        'title' => 'Anime Populer'
+    ]);
 });
 
 Route::get('/karakterpage', function () {
@@ -44,7 +46,9 @@ Route::get('/karakterpage', function () {
 });
 
 Route::get('/karakterpopuler', function () {
-    return view('karakterpopuler');
+    return view('karakterpopuler',[
+        'title' => 'Anime Populer'  
+    ]);
 });
 
 Route::get('/login', function () {
@@ -67,6 +71,13 @@ Route::get('/test', function () {
     return view('test');
 });
 
+Route::get('/new-anime', function () {
+    return view('admin.newAnime');
+});
+
+route::get('/new-anime', [AnimeController::class, 'index']);
+
+route::get('/new-karakter', [KarakterController::class, 'index']);
 
 route::get('/test', [HomePageController::class, 'index']);
 
@@ -76,9 +87,6 @@ route::get('animepage', [AnimePageController::class, 'index']);
 
 route::get('karakterpage', [KarakterPageController::class, 'index']);
 
-route::get('animepopuler', [AnimePopulerController::class, 'index']);
-
-route::get('karakterpopuler', [KarakterPopulerController::class, 'index']);
 
 route::get('/login', [LoginController::class, 'index'])->name('login')->middleware('guest');
 route::post('/login', [LoginController::class, 'authenticated']);

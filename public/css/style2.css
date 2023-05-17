@@ -503,7 +503,7 @@ a{
 
 .karakter_profile{
     background-color: #ffffff;
-    width: 270px;
+    width: 274px;
     margin: auto;
     margin-top: 30px;
     border: 2px solid transparent;
@@ -512,7 +512,7 @@ a{
 .karakter_profile .karakter_informasi-text{
     text-align: center;
     color: #ffffff;
-    padding-top: 7px;
+    padding: 5px;
     font-size: 20px;
     font-family: 'Roboto';
     font-weight: bold;
@@ -1148,3 +1148,38 @@ input{
     border: 0px solid #ced4da !important;
     border-bottom: 1px solid #ced4da !important;
 }
+
+.input-new{
+    background-color: transparent;
+    border: 0px;
+    outline: none;
+}
+
+#title::placeholder{
+    color:#fff;
+    font-family: 'inter';
+}
+#title{
+    display: block;
+    width: 300px;
+    height: 40px;
+    font-family: 'inter';
+    font-weight: 500;
+    font-size: 24px;
+    margin: auto;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+#sinopsis{
+    width: 950px;
+}
+
+#karakter{
+    display: flex;
+    overflow-y: visible;
+    width: 550px;
+    height: 500px;
+}
+
