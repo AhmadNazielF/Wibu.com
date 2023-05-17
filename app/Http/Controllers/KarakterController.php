@@ -11,4 +11,6 @@ class KarakterController extends Controller
            'title' => 'NEW  KARAKTER'
       ]);
     }
+    
+
 }

@@ -90,7 +90,8 @@ route::get('/', [LandingPageController::class, 'index']);
 route::get('animepage', [AnimePageController::class, 'index']);
 
 route::get('karakterpage', [KarakterPageController::class, 'index']);
-
+route::get('/newfanart', [KarakterPageController::class, 'fanart']);
+route::post('/newfanart', [KarakterPageController::class, 'upFanart']);
 
 route::get('/login', [LoginController::class, 'index'])->name('login')->middleware('guest');
 route::post('/login', [LoginController::class, 'authenticated']);
