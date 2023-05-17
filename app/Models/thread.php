@@ -9,7 +9,7 @@ class thread extends Model
 {
     use HasFactory;
     protected $table = 'threads';
-    protected $fillable = ['slug','user_id','category','judul','comment'];
+    protected $fillable = ['slug','user_id','judul','comment'];
 
     /**
      * Get all of the comments for the thread
@@ -20,8 +20,8 @@ class thread extends Model
     {
         return $this->hasMany(comment::class);
     }
-    public function threads()
+    public function user()
     {
-        return $this->hasMany(Thread::class);
+        return $this->belongsTo(User::class,'user_id');
     }
 }

@@ -9,6 +9,8 @@ use App\Http\Controllers\KarakterPageController;
 use App\Http\Controllers\AnimePopulerController;
 use App\Http\Controllers\KarakterPopulerController;
 use App\Http\Controllers\ThreadController;
+use App\Http\Controllers\CommentController;
+use App\Http\Controllers\ThreadShow;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -28,8 +30,10 @@ Route::get('/', function () {
 
 Route::get('/listthread', [ThreadController::class, 'index']);
 Route::get('/createThread',  [ThreadController::class, 'create'])->middleware('auth');
-Route::get('/isithread', [ThreadController::class, 'isi']);
-Route::get('/comment', [ThreadController::class, 'comment']);
+// Route::get('/isithread', [ThreadController::class, 'isi']);
+Route::post('/store', [ThreadController::class, 'store']);
+Route::get('/thread/{slug}',[ThreadController::class, 'thread']);
+Route::post('/thread/{slug}', [ThreadController::class, 'insertComment'])->middleware('auth');
 
 Route::get('/animepage', function () {
     return view('animepage');
