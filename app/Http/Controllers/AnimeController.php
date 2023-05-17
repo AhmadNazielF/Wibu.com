@@ -4,11 +4,11 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
-class HomePageController extends Controller
+class AnimeController extends Controller
 {
     public function index(){
-        return view('test', [
-           'title' => 'Wibu.com'
+        return view('admin.newAnime', [
+           'title' => 'NEW ANIME'
       ]);
     }
 }
