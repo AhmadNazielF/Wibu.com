@@ -4,13 +4,37 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\thread;
+use App\Models\User;
+use App\Models\comment;
+use Illuminate\Support\Facades\DB;
 
 class ThreadController extends Controller
 {
-    public function index(){
+    public function index()
+    {
+        $threads = Thread::with('user')->get();
+    
         return view('thread.listThread', [
-           'title' => 'listThread',
-      ]);
+            'title' => 'listThread', 
+            'threads' => $threads
+        ]);
+    }
+    public function thread($slug)
+    {
+        $thread = DB::table('threads')
+        ->where('slug', $slug)
+        ->first();
+        $user = DB::table('users')
+        ->where('id', $thread->user_id)
+        ->get();
+        $comment = comment::with('user')->
+        where('thread_id',$thread->id)->get();
+
+
+        return view('thread.isiThread',['title'=>$thread->judul,
+        'thread'=>$thread,
+        'user'=>$user,
+        'comment'=>$comment]);
     }
     public function create()
     {
@@ -19,18 +43,18 @@ class ThreadController extends Controller
        ]);
     }
     public function store(Request $request)
-    {
-        thread::create([
-            'slug'=>strtolower(str_replace(' ', '_', $request->judul)),
-            'category'=>$request['kategori'],
-            'judul'=>$request['judul'],
-            'comment'=>$request['text'],
-            'user_id' => auth()->id()
-        ]);
-        return view('thread.isiThread',[
-            'title' => 'isi'
-       ]);
-    }
+{
+    // dd($request);
+    thread::create([
+        'judul' => $request['judul'],
+        'slug' => strtolower(str_replace(' ', '_', $request->judul)),
+        'comment' => $request['comment'],
+        'user_id' => auth()->id()
+    ]);
+    
+    return redirect()->back();
+}
+
     public function isi()
     {
     //     $thread = thread::where('id', 'LIKE', $slug)->first();
@@ -38,24 +62,17 @@ class ThreadController extends Controller
             'title' => 'isi'
        ]);
     }
-    public function comment($slug)
+    public function insertComment(Request $request)
     {
-        $thread = DB::table('threads')
-    ->where('slug', 'LIKE', $slug)
-    ->first();
 
-        $thread_id = null;
-
-        if ($thread) {
-        $thread_id = $thread->id;
-        }
-        comment::create([
-            'thread_id' =>$thread_id,
-            'comment'=>$request['text'],
-            'user_id' => auth()->id()
+        $comment= comment::create([
+        'comment' => $request['comment'],
+        'user_id' => auth()->id(),
+        'thread_id'=>$request['thread_id']
         ]);
-        return view('thread.isiThread',[
-            'title' => 'isi'
-       ]);
+        // Lakukan apa pun yang diperlukan setelah penyimpanan komentar, seperti pengiriman notifikasi, penambahan poin, dll.
+    
+        return redirect()->back();
     }
+    
 }

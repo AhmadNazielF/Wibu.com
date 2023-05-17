@@ -16,8 +16,8 @@ return new class extends Migration
             $table->string('slug');
             $table->foreignId('user_id');
             $table->string('judul');
-            $table->string('category');
             $table->string('comment');
+            $table->timestamps();
         });
     }
 
