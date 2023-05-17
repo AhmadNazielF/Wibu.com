@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
     <title>{{ $title }}</title>
     <link rel="stylesheet" type="text/css" href="css/style2.css">
+    <link href='https://fonts.googleapis.com/css?family=Inter' rel='stylesheet'>
     @vite(['resources/sass/app.scss','resources/js/app.js'])
     <link rel="icon" href="favicon.ico">
   </head>
@@ -18,4 +19,6 @@
         
 
     </body>
+
+
 </html>
