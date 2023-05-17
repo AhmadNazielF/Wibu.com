@@ -9,7 +9,7 @@ use App\Models\User;
 class RegisterController extends Controller
 {
     public function index(){
-        return view('register', [
+        return view('autentikasi.register', [
            'title' => 'Register'
       ]);
     }
