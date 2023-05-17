@@ -48,11 +48,11 @@ Route::get('/karakterpopuler', function () {
 });
 
 Route::get('/login', function () {
-    return view('login');
+    return view('autentikasi.login');
 });
 
 Route::get('/register', function () {
-    return view('register');
+    return view('autentikasi.register');
 });
 
 Route::get('/homepage', function () {

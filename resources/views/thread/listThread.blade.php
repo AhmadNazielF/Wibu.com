@@ -2,13 +2,13 @@
 
 @section('container')
     <!-- list thread -->
-    <div>
+    <div class="thread-list_layout">
         <div class="thread-header-list">
             <div class="thread-h1">All Thread</div>
-        </div><br>
-        <a href="/createThread">
-            <div class="thread-button-start"> Start thread </div>
-        </a><br>
+        </div>
+        <button class="btn btn-red my-3 h-1">
+            Start Thread
+          </button>
         <ul class="thread-list">
             <li>
                 <h3><a href="/isithread">Judul Thread Pertama</a></h3>
