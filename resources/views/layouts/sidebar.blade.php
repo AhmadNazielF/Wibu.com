@@ -120,7 +120,7 @@
         <div class="sidebar_teks-link">ANIME POPULER</div>
        </a> 
        <!-- thread-->
-       <a href="/listSThread" class="sidebar_link">
+       <a href="/listthread" class="sidebar_link">
         <div class="sidebar_link-icon">
           <svg width="40" height="40" viewBox="-50 0 708 964" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M5.43215 950.132C13.0017 933.896 17.7893 929.406 28.3073 925.742L19.4391 922.742L5.43215 950.132Z" stroke="black" stroke-width="10"/>

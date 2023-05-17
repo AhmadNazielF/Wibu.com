@@ -8,6 +8,7 @@ use App\Http\Controllers\AnimePageController;
 use App\Http\Controllers\KarakterPageController;
 use App\Http\Controllers\AnimePopulerController;
 use App\Http\Controllers\KarakterPopulerController;
+use App\Http\Controllers\ThreadController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -25,9 +26,10 @@ Route::get('/', function () {
     return view('landingpage');
 });
 
-Route::get('/listThread', function () {
-    return view('listThread');
-});
+Route::get('/listthread', [ThreadController::class, 'index']);
+Route::get('/createThread',  [ThreadController::class, 'create'])->middleware('auth');
+Route::get('/isithread', [ThreadController::class, 'isi']);
+Route::get('/comment', [ThreadController::class, 'comment']);
 
 Route::get('/animepage', function () {
     return view('animepage');
@@ -59,11 +61,12 @@ Route::get('/homepage', function () {
 
 Route::get('/dashboard', function () {
     return view('dashboard.index');
-})->middleware('auth');;
+})->middleware('auth');
 
 Route::get('/test', function () {
     return view('test');
 });
+
 
 route::get('/test', [HomePageController::class, 'index']);
 
