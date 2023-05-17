@@ -80,6 +80,7 @@ Route::get('/new-anime', function () {
 });
 
 route::get('/new-anime', [AnimeController::class, 'index']);
+route::post('/new-anime', [AnimeController::class, 'store']);
 
 route::get('/new-karakter', [KarakterController::class, 'index']);
 
@@ -99,3 +100,5 @@ route::post('/logout', [LoginController::class, 'logout']);
 
 route::get('/register', [RegisterController::class, 'index'])->middleware('guest');
 route::post('/register', [RegisterController::class, 'store']);
+
+//route::post('create-anime', [AnimeController::class]);
