@@ -44,7 +44,7 @@ class User extends Authenticatable
     ];
     public function comment()
     {
-        return $this->hasMany(Comment::class);
+        return $this->hasMany(comment::class);
     }
     public function threads()
     {
