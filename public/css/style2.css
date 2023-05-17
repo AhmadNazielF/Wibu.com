@@ -852,8 +852,8 @@ input{
     color: #ffffff;
     border: none;
     padding: 10px 20px;
-    width: 50px;
-    height: 20px;
+    width: 262px;
+    height: 79px;
     cursor: pointer;
     border-radius: 5px;
     text-align: center;
@@ -1062,3 +1062,8 @@ input{
 .thread_layout-page {
     display: flex;
 }
+.custom-input {
+    width: 522px;
+    height: 103px;
+    font-size: 32px;
+  }

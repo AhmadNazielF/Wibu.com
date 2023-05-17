@@ -15,7 +15,8 @@ return new class extends Migration
             $table->id();
             $table->foreignId('user_id');
             $table->string('judul');
-            $table->string('comment')->nullable();
+            $table->string('category');
+            $table->string('comment');
         });
     }
 
