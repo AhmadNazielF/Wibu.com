@@ -8,15 +8,21 @@
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-white" href="#">
+          <a href="new-anime" class="nav-link text-white" href="#">
             <span data-feather="file" class="align-text-bottom text-white"></span>
             Anime
           </a>
         </li>
         <li class="nav-item">
-          <a class="nav-link text-white" href="#">
+          <a href="/new-karakter" class="nav-link text-white" href="#">
             <span data-feather="file" class="align-text-bottom text-white"></span>
             Karakter
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="/newfanart"class="nav-link text-white" href="#">
+            <span data-feather="file" class="align-text-bottom text-white"></span>
+            Fanarts
           </a>
         </li>
       </ul>

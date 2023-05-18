@@ -42,7 +42,7 @@ class AnimePageController extends Controller
 
        anime::create([
         'judul'=>$request['judul'],
-        'slug' => strtolower(str_replace(' ', '_', $request->nama)),
+        'slug' => strtolower(str_replace(' ', '_', $request->judul)),
         'judul_alternatif'=>$request['judul_alternatif'],
         'genre'=>$request['genre'],
         'status'=>$request['status'],
@@ -67,7 +67,6 @@ class AnimePageController extends Controller
             ->orderBy('click', 'desc')
             ->take(13)
             ->get();
-        ($topAnime);
         return view('animepopuler', ['title'=>'KarakterPopular','topAnime' => $topAnime]);
     }
     public function destroy(string $id)

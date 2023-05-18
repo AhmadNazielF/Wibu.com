@@ -14,13 +14,22 @@
       </defs>
       </svg>          
    </div>
+
+    <div class="search">
+      <div class="search-container">
+          <form action="/search">
+          <input type="text" placeholder="Search..." name="search">
+          </form>
+      </div>
+  </div>
+  
    <!--rekomendasi-->
    <div class="rekomendasi_layout">
     <div class="rekomendasi">
       @for ($i = 0; $i < 3; $i++)
         <a href="#" class="rekomendasi_anime">
-          <div class="rekomendasi_anime-foto"><img src="foto/mobPsyco100.jpg" alt="" width="350" height="207"></div>
-          <div class="rekomendasi-judul">Mob Psyco 100</div>
+          <div class="rekomendasi_anime-foto"><img src="{{asset($topAnime[$i]->image)}}" alt="" width="350" height="207"></div>
+          <div class="rekomendasi-judul">{{$topAnime[$i]->judul}}</div>
         </a>
       @endfor
       </div>
@@ -38,27 +47,14 @@
           <a href="/animepopuler" class="lebih_banyak">Lebih banyak</a>
         </div>
         <div class="populer_bawah">
-          <a href="#" class="poster">
-            <div class="poster_foto-anime"><img src="foto/aot4.jpeg" alt="" width="170px" height="240"></div>
-            <div class="poster_text">Attack on Titan <br> Season: 4</div>
+          @if ($topAnime)
+          @foreach ($topAnime as $topAnime)
+          <a href="{{ '/animepage/' . $topAnime->slug }}" class="poster">
+            <div class="poster_foto-anime"><img src="{{ asset($topAnime->image) }}" alt="" width="170px" height="240"></div>
+            <div class="poster_text">{{$topAnime->judul}}</div>
           </a>
-          <a href="/animepage" class="poster">
-            <div class="poster_foto-anime"><img src="foto/OPM.webp" alt="" width="170px" height="240"></div>
-            <div class="poster_text">One Punch Man</div>
-          </a>              
-          <a href="#" class="poster">
-            <div class="poster_foto-anime"><img src="foto/SXF.jpeg" alt="" width="170px" height="240"></div>
-            <div class="poster_text">Spy X Family</div>
-          </a>                  
-          <a href="#" class="poster">
-            <div class="poster_foto-anime"><img src="foto/jjk.jpeg"
-              alt="" width="170px" height="240"></div>
-            <div class="poster_text">Jujutsu Kaisen</div>
-          </a>                  
-          <a href="#" class="poster">
-            <div class="poster_foto-anime"><img src="foto/Vinlad Saga.jpg" alt="" width="170px" height="240"></div>
-            <div class="poster_text">Vinland Saga</div>
-          </a>    
+          @endforeach
+          @endif
         </div>
       </div>
       <!--karakter populer-->
@@ -70,51 +66,19 @@
           <a href="/karakterpopuler" class="lebih_banyak">Lebih banyak</a>
         </div>
         <div class="populer_bawah">
-          <a href="/karakterpage" class="poster">
+          @if ($topCharacter)
+          @foreach ($topCharacter as $topCharacter)
+          <a href="{{ '/karakterpage/' . $topCharacter->slug }}" class="poster">
             <div class="poster_foto-karakter">
               <div class="border">
-              <img src="foto/Saitama.jpeg" alt="" width="170px" height="170px">
+              <img src="{{asset($topCharacter->image)}}" alt="" width="170px" height="170px">
               </div>
             </div>
-            <div class="poster_text">Saitama</div>
-            <div class="poster_text-asal">One Punch Man</div>
+            <div class="poster_text">{{$topCharacter->nama}}</div>
+            <div class="poster_text-asal">{{ $topCharacter->anime->judul }}</div>
           </a>
-          <a href="#" class="poster">
-            <div class="poster_foto-karakter">
-              <div class="border">
-              <img src="foto/Eren.jpeg" alt="" width="170px" height="170px">
-              </div>
-            </div>
-            <div class="poster_text">Eren Jeager</div>
-            <div class="poster_text-asal">Attack On Titan</div>
-          </a>
-          <a href="#" class="poster">
-            <div class="poster_foto-karakter">
-              <div class="border">
-              <img src="foto/Gojo.jpeg" alt="" width="170px" height="170px">
-              </div>
-            </div>
-            <div class="poster_text">Satoru Gojo</div>
-            <div class="poster_text-asal">Jujutsu Kaisen</div>
-          </a>
-          <a href="#" class="poster">
-            <div class="poster_foto-karakter">
-              <div class="border">
-              <img src="foto/Jotaro.webp" alt="" width="170px" height="170px">
-              </div>
-            </div>
-            <div class="poster_text">Jotaro Kujo</div>
-            <div class="poster_text-asal">JoJo Bizzare Adventure <br> Stardust Crussader</div>
-          </a>
-          <a href="#" class="poster">
-            <div class="poster_foto-karakter">
-              <div class="border">
-              <img src="foto/Mob.jpeg" alt="" width="170px" height="170px">
-              </div>
-            </div>
-            <div class="poster_text">Shigeo Kageyama</div>
-            <div class="poster_text-asal">Mob Psyco 100</div>
-          </a>
+          @endforeach
+          @endif
         </div>
       </div>
     </div>
@@ -123,80 +87,19 @@
       <a href="#" class="thread_atas">
         <div class="thread_teks-atas"> Thread dan diskusi</div>
       </a>
-      <div class="thread_bawah">
-        <!-- thread-->
+
         <div class="thread">
-          <div class="thread-text-atas">Thread</div>
-          <div class="thread-content-container">
-            <a href="#" class="thread-content">
-              <div class="thread-text"> thread </div>
-            </a>
-            <a href="#" class="thread-content">
-              <div class="thread-text"> thread </div>
-            </a>
-            <a href="#" class="thread-content">
-              <div class="thread-text"> thread </div>
-            </a>
-            <a href="#" class="thread-content">
-              <div class="thread-text"> thread </div>
-            </a>
-            <a href="#" class="thread-content">
-              <div class="thread-text"> thread </div>
-            </a>
-        </div>
-        </div>
-        <!--diskusi-->
-        <div class="thread">
-          <div class="thread-text-atas">Diskusi</div>
-          <div class="thread-content-container">
-            <a href="#" class="thread-content">
-              <div class="thread-text"> thread </div>
-            </a>
-            <a href="#" class="thread-content">
-              <div class="thread-text"> thread </div>
-            </a>
-            <a href="#" class="thread-content">
-              <div class="thread-text"> thread </div>
-            </a>
-            <a href="#" class="thread-content">
-              <div class="thread-text"> thread </div>
-            </a>
-            <a href="#" class="thread-content">
-              <div class="thread-text"> thread </div>
-            </a>      
-            <a href="#" class="thread-content">
-              <div class="thread-text"> thread </div>
-            </a>
-            <a href="#" class="thread-content">
-              <div class="thread-text"> thread </div>
-            </a>
-            <a href="#" class="thread-content">
-              <div class="thread-text"> thread </div>
-            </a>
-            <a href="#" class="thread-content">
-              <div class="thread-text"> thread </div>
-            </a>
-            <a href="#" class="thread-content">
-              <div class="thread-text"> thread </div>
-            </a>
-            <a href="#" class="thread-content">
-              <div class="thread-text"> thread </div>
-            </a>
-            <a href="#" class="thread-content">
-              <div class="thread-text"> thread </div>
-            </a>
-            <a href="#" class="thread-content">
-              <div class="thread-text"> thread </div>
-            </a>
-            <a href="#" class="thread-content">
-              <div class="thread-text"> thread </div>
-            </a>
-            <a href="#" class="thread-content">
-              <div class="thread-text"> thread </div>
-            </a>
-        </div>
-        </div>
-      </div>
+          @if ($threadall)
+                <div class="thread">
+                    <div class="thread-text-atas">Thread</div>
+                    @foreach ($threadall as $item)
+                    <div class="thread-content-container">
+                        <a href="{{'/thread/'.$item->slug}}" class="thread-content">
+                            <div class="thread-text"> {{$item->judul}}</div>
+                        </a>
+                    @endforeach
+                </div>
+           @endif
     </div>
     </div>
   </div>

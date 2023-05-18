@@ -54,9 +54,9 @@
             <a href="#" class="thread_atas">
                 <div class="thread_teks-atas"> Thread dan diskusi</div>
             </a>
-            @if ($threadall)
             <div class="thread_bawah">
                 <!-- thread-->
+                @if ($threadall)
                 <div class="thread">
                     <div class="thread-text-atas">Thread</div>
                     @foreach ($threadall as $item)
@@ -66,9 +66,9 @@
                         </a>
                     @endforeach
                 </div>
+                @endif
                 </div>
             </div>
-            @endif
         </div>
 
 
