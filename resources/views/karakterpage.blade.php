@@ -1,12 +1,12 @@
 @extends('layouts.main')
 
 @section('container')
+<!--
 <style>
   body{
     background-color: rgb(39, 39, 39)!important;
     margin-left: 83px;
 }
-
 a{
 	text-decoration: none !important;
 }
@@ -1157,6 +1157,8 @@ input{
     border-bottom: 1px solid #ced4da !important;
 }
 </style>
+
+-->
    <!--Karakter page-->
    <div class="karakter-page_layout">
     <div class="block_karakter">
