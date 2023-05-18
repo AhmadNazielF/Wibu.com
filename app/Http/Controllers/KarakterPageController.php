@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Carbon\Carbon;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use App\Models\fanart;
@@ -12,7 +13,7 @@ class KarakterPageController extends Controller
     public function index($slug){
         $character=character::where('slug','LIKE',$slug)->first();
         $fanart=DB::table('fanarts')->where('character_id',$character->id)->get();
-        
+        DB::table('characters')->where('slug','LIKE',$slug)->increment('click');
         return view('karakterpage', [
            'title' => 'KARAKTER','fanart' => $fanart,'karakter' => $character
       ]);
@@ -67,7 +68,21 @@ class KarakterPageController extends Controller
            'penampilan'=>$request['penampilan'],
            'sejarah'=>$request['sejarah'],
            'anime_id'=>$anime_id,
+           'clicks'=>'0'
         ]);
         return redirect()->back();
     }
+
+public function topKarakter() {
+    $startDate = Carbon::now()->subDays(7); // Mengatur tanggal mulai jangka waktu (7 hari sebelumnya)
+    $endDate = Carbon::now(); // Mengatur tanggal akhir jangka waktu (tanggal saat ini)
+
+    $topCharacter = Character::select('*')
+        ->whereBetween('created_at', [$startDate, $endDate]) // Mengatur rentang tanggal
+        ->orderBy('click', 'desc')
+        ->take(13)
+        ->get();
+    dd($topCharacter);
+    return view('karakterpopuler', ['title'=>'KarakterPopular','topCharacter' => $topCharacter]);
+}
 }

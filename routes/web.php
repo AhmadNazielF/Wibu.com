@@ -49,11 +49,7 @@ Route::get('/karakterpage', function () {
     return view('karakterpage');
 });
 
-Route::get('/karakterpopuler', function () {
-    return view('karakterpopuler',[
-        'title' => 'Anime Populer'  
-    ]);
-});
+Route::get('/karakterpopuler',[KarakterPageController::class, 'topKarakter']);
 
 Route::get('/login', function () {
     return view('autentikasi.login');

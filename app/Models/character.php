@@ -9,7 +9,7 @@ class character extends Model
 {
     use HasFactory;
     protected $table = 'characters';
-    protected $fillable = ['nama','slug','role','umur','status','gender','tinggi','deskripsi','penampilan','sejarah','image','anime_id'];
+    protected $fillable = ['nama','slug','role','umur','status','gender','tinggi','deskripsi','penampilan','sejarah','image','anime_id','click'];
     public function anime()
     {
         return $this->belongsTo(anime::class);

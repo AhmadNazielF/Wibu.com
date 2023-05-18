@@ -25,8 +25,27 @@ class CharacterSeeder extends Seeder
             'penampilan' => 'botak',
             'sejarah'=> 'botak',
             'anime_id'=> '1',
+            'click'=> '0',
+            'created_at' => date('Y-m-d H:i:s'),
+            'updated_at' => date('Y-m-d H:i:s'),
+        ]);
+        DB::table('characters')->insert([
+            'slug' => strtolower(str_replace(' ', '_', 'Saitama')),
+            'nama' => 'tatsumaki',
+            'role' => 'main character',
+            'umur' => '28',
+            'status' => 'belum menikah',
+            'gender' => 'laki laki',
+            'tinggi' => '180 cm',
+            'image' => 'foto/saitama.jpg',
+            'deskripsi' => 'botak',
+            'penampilan' => 'botak',
+            'sejarah'=> 'botak',
+            'anime_id'=> '1',
+            'click'=> '0',
             'created_at' => date('Y-m-d H:i:s'),
             'updated_at' => date('Y-m-d H:i:s'),
         ]);
     }
+    
 }

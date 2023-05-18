@@ -25,6 +25,7 @@ return new class extends Migration
             $table->string('sejarah')->nullable();
             $table->string('image')->nullable();
             $table->foreignId('anime_id');
+            $table->integer('click');
             $table->timestamps();
         });
     }
