@@ -82,7 +82,6 @@ public function topKarakter() {
         ->orderBy('click', 'desc')
         ->take(13)
         ->get();
-    dd($topCharacter);
     return view('karakterpopuler', ['title'=>'KarakterPopular','topCharacter' => $topCharacter]);
 }
 }

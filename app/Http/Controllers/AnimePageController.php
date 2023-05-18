@@ -13,10 +13,12 @@ class AnimePageController extends Controller
 
     public function index($slug){
         $anime=anime::where('slug','LIKE',$slug)->first();
-        DB::table('anime')->where('slug','LIKE',$slug)->increment('click');
+        DB::table('animes')->where('slug','LIKE',$slug)->increment('click');
+        $character=character::where('anime_id',$anime->id)->get();
         return view('animepage', [
            'title' => 'anime',
-           'anime' => $anime
+           'anime' => $anime,
+           'character' => $character
       ]);
     }
 
@@ -56,17 +58,17 @@ class AnimePageController extends Controller
        return redirect()->back();
     }
 
-    public function topKarakter() {
+    public function topAnime() {
         $startDate = Carbon::now()->subDays(7); // Mengatur tanggal mulai jangka waktu (7 hari sebelumnya)
         $endDate = Carbon::now(); // Mengatur tanggal akhir jangka waktu (tanggal saat ini)
     
-        $topCharacter = Character::select('*')
+        $topAnime = Anime::select('*')
             ->whereBetween('created_at', [$startDate, $endDate]) // Mengatur rentang tanggal
             ->orderBy('click', 'desc')
             ->take(13)
             ->get();
-        dd($topCharacter);
-        return view('karakterpopuler', ['title'=>'KarakterPopular','topCharacter' => $topCharacter]);
+        ($topAnime);
+        return view('animepopuler', ['title'=>'KarakterPopular','topAnime' => $topAnime]);
     }
     public function destroy(string $id)
     {

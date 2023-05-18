@@ -23,57 +23,57 @@
             <div class="popular_top">
                 <div class="popular_top__1">
                   <div class="anime_foto-popular">
-                    <div class="anime_foto-content"><img src="foto/jjba-Sc.jpeg" alt="" width="230" height="134"></div>
-                    <div class="anime_foto-nama">JoJo Bizzare Adventure: <br> Stardust Crussader</div>
+                    <div class="anime_foto-content"><img src="{{asset($topAnime[0]->image)}}" alt="" width="230" height="134"></div>
+                    <div class="anime_foto-nama">{{$topAnime[0]->judul}}</div>
                   </div>
                 </div>
                 <div class="popular_top__23">
                   <div class="anime_foto-popular">
-                    <div class="anime_foto-content"><img src="foto/aot-4.jpeg" alt="" width="230" height="134"></div>
-                    <div class="anime_foto-nama">Attack on Titan<br> Season 4</div>
+                    <div class="anime_foto-content"><img src="{{asset($topAnime[1]->image)}}" alt="" width="230" height="134"></div>
+                    <div class="anime_foto-nama">{{$topAnime[1]->judul}}</div>
                   </div>
                   <div class="anime_foto-popular">
-                    <div class="anime_foto-content"><img src="foto/viland-sg.jpeg" alt="" width="230" height="134"></div>
-                    <div class="anime_foto-nama">Vinlad Saga</div>
+                    <div class="anime_foto-content"><img src="{{asset($topAnime[2]->image)}}" alt="" width="230" height="134"></div>
+                    <div class="anime_foto-nama">{{$topAnime[2]->judul}}</div>
                   </div>
                 </div>
             </div>
             <div class="popular_content">
               <div class="anime_foto-popular">
-                <div class="anime_foto-content"><img src="foto/mobPsyco100.jpg" alt="" width="230" height="134"></div>
-                <div class="anime_foto-nama">mobPsyco100</div>
+                <div class="anime_foto-content"><img src="{{asset($topAnime[3]->image)}}" alt="" width="230" height="134"></div>
+                <div class="anime_foto-nama">{{$topAnime[3]->judul}}</div>
               </div>
               <div class="anime_foto-popular">
-                <div class="anime_foto-content"><img src="foto/OPM.jpeg" alt="" width="230" height="134"></div>
-                <div class="anime_foto-nama">One Punch Man</div>
+                <div class="anime_foto-content"><img src="{{asset($topAnime[4]->image)}}" alt="" width="230" height="134"></div>
+                <div class="anime_foto-nama">{{$topAnime[4]->judul}}</div>
               </div>
               <div class="anime_foto-popular">
-                <div class="anime_foto-content"><img src="foto/Youjo-senki.jpeg" alt="" width="230" height="134"></div>
-                <div class="anime_foto-nama">Youjo Senki</div>
+                <div class="anime_foto-content"><img src="{{asset($topAnime[5]->image)}}" alt="" width="230" height="134"></div>
+                <div class="anime_foto-nama">{{$topAnime[5]->judul}}</div>
               </div>
               <div class="anime_foto-popular">
-                <div class="anime_foto-content"><img src="foto/danshi-koukosei.jpeg" alt="" width="230" height="134"></div>
-                <div class="anime_foto-nama">Danshi Koukosei no Nichijou</div>
+                <div class="anime_foto-content"><img src="{{asset($topAnime[6]->image)}}" alt="" width="230" height="134"></div>
+                <div class="anime_foto-nama">{{$topAnime[6]->judul}}</div>
               </div>
             </div>
-            <div class="popular_content">
+            {{-- <div class="popular_content">
               <div class="anime_foto-popular">
-                <div class="anime_foto-content"><img src="foto/accel-world.jpeg" alt="" width="230" height="134"></div>
-                <div class="anime_foto-nama">Accel World</div>
+                <div class="anime_foto-content"><img src="{{asset($topAnime[7]->image)}}" alt="" width="230" height="134"></div>
+                <div class="anime_foto-nama">{{$topAnime[7]->judul}}</div>
+              </div>
+              {{-- <div class="anime_foto-popular">
+                <div class="anime_foto-content"><img src="{{asset($topAnime[8]->image)}}" alt="" width="230" height="134"></div>
+                <div class="anime_foto-nama">{{$topAnime[8]->judul}}</div>
               </div>
               <div class="anime_foto-popular">
-                <div class="anime_foto-content"><img src="foto/any-senpai.jpeg" alt="" width="230" height="134"></div>
-                <div class="anime_foto-nama">My Anoying Senpai</div>
+                <div class="anime_foto-content"><img src="{{asset($topAnime[9]->image)}}" alt="" width="230" height="134"></div>
+                <div class="anime_foto-nama">{{$topAnime[9]->judul}}</div>
               </div>
               <div class="anime_foto-popular">
-                <div class="anime_foto-content"><img src="foto/bungo-stray-dog.jpeg" alt="" width="230" height="134"></div>
-                <div class="anime_foto-nama">Bungou Stray Dog</div>
-              </div>
-              <div class="anime_foto-popular">
-                <div class="anime_foto-content"><img src="foto/jujutsu.jpeg" alt="" width="230" height="134"></div>
-                <div class="anime_foto-nama">Jujutsu Kaisen</div>
-              </div>
-            </div>
+                <div class="anime_foto-content"><img src="{{asset($topAnime[10]->image)}}" alt="" width="230" height="134"></div>
+                <div class="anime_foto-nama">{{$topAnime[10]->judul}}</div>
+              </div> --}}
+            {{-- </div> --}} 
           </div>
         </div>
     </div>
