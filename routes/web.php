@@ -22,9 +22,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('landingpage');
-});
+Route::get('/', [LandingPageController::class,'index']);
 
 Route::get('/listthread', [ThreadController::class, 'index']);
 Route::get('/createThread',  [ThreadController::class, 'create'])->middleware('auth');
@@ -59,11 +57,6 @@ Route::get('/dashboard', function () {
 Route::get('/test', function () {
     return view('test');
 });
-
-Route::get('/new-anime', function () {
-    return view('admin.newAnime');
-});
-
 route::get('/new-anime', [AnimePageController::class, 'show']);
 route::post('/new-anime', [AnimePageController::class, 'store']);
 

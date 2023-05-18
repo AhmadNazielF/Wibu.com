@@ -67,7 +67,6 @@ class AnimePageController extends Controller
             ->orderBy('click', 'desc')
             ->take(13)
             ->get();
-        ($topAnime);
         return view('animepopuler', ['title'=>'KarakterPopular','topAnime' => $topAnime]);
     }
     public function destroy(string $id)
