@@ -29,10 +29,14 @@ class ThreadController extends Controller
         ->get();
         $comment = comment::with('user')->
         where('thread_id',$thread->id)->get();
-
+        $threadall = DB::table('threads')
+        ->orderByDesc('created_at')
+        ->take(20)
+        ->get();
 
         return view('thread.isiThread',['title'=>$thread->judul,
         'thread'=>$thread,
+        'threadall'=>$threadall,
         'user'=>$user,
         'comment'=>$comment]);
     }
