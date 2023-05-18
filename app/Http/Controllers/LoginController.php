@@ -26,9 +26,9 @@ class LoginController extends Controller
             return redirect()->intended('/');
         }
 
-//        if ($user->admin) {
-//          return redirect()->route('admin.dashboard');
-//        }
+       if ($user->admin) {
+           return redirect()->route('admin.dashboard');
+        }
 
         return back()-> with('loginFailed', 'LOGIN FAILED!');
     }

@@ -12,7 +12,7 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        // $this->call(admin::class);
+        $this->call(admin::class);
         $this->call(CharacterSeeder::class);
     }
 }

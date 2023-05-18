@@ -24,6 +24,7 @@ return new class extends Migration
             $table->string('penampilan')->nullable();
             $table->string('sejarah')->nullable();
             $table->string('image')->nullable();
+            $table->foreignId('anime_id');
             $table->timestamps();
         });
     }
