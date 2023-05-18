@@ -4,7 +4,7 @@
  <!--animepage-->
  <div class="anime-page_layout">
   <div class="block_karakter">
-  <form action="" method="post" enctype="multipart/form-data">
+  <form action="new-anime" method="post" enctype="multipart/form-data">
     @csrf
     <input type="text" name="judul" class="input-new" id="title" placeholder="TITLE">
   </div>
@@ -49,7 +49,7 @@
   </div>
   <div class="sinopsis">
       <H4>Sinopsis :</H4>
-        <textarea class="input-new" name="sinpopsis" id="sinopsis" placeholder="..."></textarea>
+        <textarea class="input-new" name="sinopsis" id="sinopsis" placeholder="..."></textarea>
     </div>
     <div class="button">
         <button type="submit" class="regis_daftar sidebar_teks-link-regis mt-0" id="submit-auth">Simpan</button>

@@ -24,6 +24,7 @@ return new class extends Migration
             $table->integer('tahun_tayang')->nullable();
             $table->string('sinopsis')->nullable();
             $table->string('image')->nullable();
+            $table->integer('click');
             $table->timestamps();
         });
     }
