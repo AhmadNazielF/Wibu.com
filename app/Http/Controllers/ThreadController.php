@@ -56,7 +56,7 @@ class ThreadController extends Controller
         'user_id' => auth()->id()
     ]);
     
-    return redirect()->back();
+    return redirect('/listthread');
 }
 
     public function isi()
