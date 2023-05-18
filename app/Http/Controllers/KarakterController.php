@@ -63,4 +63,6 @@ class KarakterController extends Controller
     {
         //
     }
+    
+
 }

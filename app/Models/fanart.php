@@ -13,6 +13,6 @@ class fanart extends Model
 
     public function character(): BelongsTo
     {
-        return $this->belongsTo(character::class);
+        return $this->belongsTo(character::class,'character_id');
     }
 }
