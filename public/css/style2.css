@@ -697,8 +697,15 @@ a{
     display: grid;
 }
 
-.popular_top__23 .karakter_foto{
-    margin: auto;
+.popular_top__23 .karakter_foto2{
+    margin-right: auto;
+    margin-left: auto;
+    
+}
+
+.popular_top__23 .karakter_foto3{
+    margin-left: auto;
+    margin-right: auto;
 }
 .mahkota-kiri{
     position: relative;
@@ -1183,3 +1190,26 @@ input{
     height: 500px;
 }
 
+
+.search-container {
+    display: flex ;
+    justify-content: center;
+    position: relative;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    min-width: 85%;
+    height: 53px;
+}
+
+.search-container input[type="text"] {
+    position: center;
+    float: center;
+    width: 800px;
+    height: 45px;
+    border-radius: 40px;
+    border-color: #989898;
+    background-color: #ffffff;
+    right: 0;
+    text-indent: 5px;
+    opacity: 0.8;
+}

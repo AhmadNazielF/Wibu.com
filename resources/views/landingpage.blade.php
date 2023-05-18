@@ -14,6 +14,15 @@
       </defs>
       </svg>          
    </div>
+
+    <div class="search">
+      <div class="search-container">
+          <form action="/search">
+          <input type="text" placeholder="Search..." name="search">
+          </form>
+      </div>
+  </div>
+  
    <!--rekomendasi-->
    <div class="rekomendasi_layout">
     <div class="rekomendasi">

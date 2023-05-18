@@ -8,6 +8,7 @@ use App\Http\Controllers\AnimePageController;
 use App\Http\Controllers\KarakterPageController;
 use App\Http\Controllers\ThreadController;
 use App\Http\Controllers\CommentController;
+use App\Http\Controllers\SearchController;
 use App\Http\Controllers\ThreadShow;
 use Illuminate\Support\Facades\Route;
 
@@ -57,6 +58,16 @@ Route::get('/dashboard', function () {
 Route::get('/test', function () {
     return view('test');
 });
+
+Route::get('/new-anime', function () {
+    return view('admin.newAnime');
+});
+
+Route::get('/search', function () {
+    return view('search');
+});
+
+route::get('/animepage/{slug}', [AnimePageController::class, 'index']);
 route::get('/new-anime', [AnimePageController::class, 'show']);
 route::post('/new-anime', [AnimePageController::class, 'store']);
 
@@ -79,3 +90,5 @@ route::post('/logout', [LoginController::class, 'logout']);
 
 route::get('/register', [RegisterController::class, 'index'])->middleware('guest');
 route::post('/register', [RegisterController::class, 'store']);
+
+route::get('/search', [SearchController::class, 'search']);

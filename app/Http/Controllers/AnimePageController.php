@@ -42,7 +42,7 @@ class AnimePageController extends Controller
 
        anime::create([
         'judul'=>$request['judul'],
-        'slug' => strtolower(str_replace(' ', '_', $request->nama)),
+        'slug' => strtolower(str_replace(' ', '_', $request->judul)),
         'judul_alternatif'=>$request['judul_alternatif'],
         'genre'=>$request['genre'],
         'status'=>$request['status'],
