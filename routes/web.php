@@ -6,8 +6,6 @@ use App\Http\Controllers\HomePageController;
 use App\Http\Controllers\LandingPageController;
 use App\Http\Controllers\AnimePageController;
 use App\Http\Controllers\KarakterPageController;
-use App\Http\Controllers\AnimeController;
-use App\Http\Controllers\KarakterController;
 use App\Http\Controllers\ThreadController;
 use App\Http\Controllers\CommentController;
 use App\Http\Controllers\ThreadShow;
@@ -75,8 +73,8 @@ Route::get('/new-anime', function () {
     return view('admin.newAnime');
 });
 
-route::get('/new-anime', [AnimeController::class, 'index']);
-route::post('/new-anime', [AnimeController::class, 'store']);
+route::get('/new-anime', [AnimePageController::class, 'show']);
+route::post('/new-anime', [AnimePageController::class, 'store']);
 
 route::get('/new-karakter', [KarakterPageController::class, 'create']);
 route::post('/new-karakter', [KarakterPageController::class, 'store']);
@@ -97,5 +95,3 @@ route::post('/logout', [LoginController::class, 'logout']);
 
 route::get('/register', [RegisterController::class, 'index'])->middleware('guest');
 route::post('/register', [RegisterController::class, 'store']);
-
-//route::post('create-anime', [AnimeController::class]);
