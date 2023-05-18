@@ -697,8 +697,15 @@ a{
     display: grid;
 }
 
-.popular_top__23 .karakter_foto{
-    margin: auto;
+.popular_top__23 .karakter_foto2{
+    margin-right: auto;
+    margin-left: auto;
+    
+}
+
+.popular_top__23 .karakter_foto3{
+    margin-left: auto;
+    margin-right: auto;
 }
 .mahkota-kiri{
     position: relative;
