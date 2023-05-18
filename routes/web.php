@@ -49,11 +49,7 @@ Route::get('/karakterpage', function () {
     return view('karakterpage');
 });
 
-Route::get('/karakterpopuler', function () {
-    return view('karakterpopuler',[
-        'title' => 'Anime Populer'  
-    ]);
-});
+Route::get('/karakterpopuler',[KarakterPageController::class, 'topKarakter']);
 
 Route::get('/login', function () {
     return view('autentikasi.login');
@@ -82,7 +78,8 @@ Route::get('/new-anime', function () {
 route::get('/new-anime', [AnimeController::class, 'index']);
 route::post('/new-anime', [AnimeController::class, 'store']);
 
-route::get('/new-karakter', [KarakterController::class, 'index']);
+route::get('/new-karakter', [KarakterPageController::class, 'create']);
+route::post('/new-karakter', [KarakterPageController::class, 'store']);
 
 route::get('/test', [HomePageController::class, 'index']);
 
@@ -90,7 +87,7 @@ route::get('/', [LandingPageController::class, 'index']);
 
 route::get('animepage', [AnimePageController::class, 'index']);
 
-route::get('karakterpage', [KarakterPageController::class, 'index']);
+route::get('/karakterpage/{slug}', [KarakterPageController::class, 'index']);
 route::get('/newfanart', [KarakterPageController::class, 'fanart']);
 route::post('/newfanart', [KarakterPageController::class, 'upFanart']);
 

@@ -30,7 +30,6 @@ class AnimeController extends Controller
      */
     public function store(Request $request)
     {
-        dd($request->judul);
 
         $validateData = $request->validate([
         'judul' => 'required',
@@ -43,7 +42,7 @@ class AnimeController extends Controller
        }
 
         Anime::Create($validateData);
-
+       
         return redirect('/');
     }
 
