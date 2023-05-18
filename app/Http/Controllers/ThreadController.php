@@ -20,9 +20,9 @@ class ThreadController extends Controller
         ]);
     }
     public function thread($slug)
-    {
+    {   
         $thread = DB::table('threads')
-        ->where('slug', $slug)
+        ->where('slug','LIKE'. $slug)
         ->first();
         $user = DB::table('users')
         ->where('id', $thread->user_id)
@@ -56,7 +56,7 @@ class ThreadController extends Controller
         'user_id' => auth()->id()
     ]);
     
-    return redirect()->back();
+    return redirect('/listthread');
 }
 
     public function isi()
