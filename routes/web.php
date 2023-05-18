@@ -23,9 +23,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('landingpage');
-});
+Route::get('/', [LandingPageController::class,'index']);
 
 Route::get('/listthread', [ThreadController::class, 'index']);
 Route::get('/createThread',  [ThreadController::class, 'create'])->middleware('auth');
@@ -33,16 +31,7 @@ Route::get('/createThread',  [ThreadController::class, 'create'])->middleware('a
 Route::post('/store', [ThreadController::class, 'store']);
 Route::get('/thread/{slug}',[ThreadController::class, 'thread']);
 Route::post('/thread/{slug}', [ThreadController::class, 'insertComment'])->middleware('auth');
-
-Route::get('/animepage', function () {
-    return view('animepage',);
-});
-
-Route::get('/animepopuler', function () {
-    return view('animepopuler',[
-        'title' => 'Anime Populer'
-    ]);
-});
+Route::get('/animepopuler', [AnimePageController::class, 'topAnime']);
 
 Route::get('/karakterpage', function () {
     return view('karakterpage');
@@ -89,7 +78,7 @@ route::get('/test', [HomePageController::class, 'index']);
 
 route::get('/', [LandingPageController::class, 'index']);
 
-route::get('animepage', [AnimePageController::class, 'index']);
+route::get('/animepage/{slug}', [AnimePageController::class, 'index']);
 
 route::get('/karakterpage/{slug}', [KarakterPageController::class, 'index']);
 route::get('/newfanart', [KarakterPageController::class, 'fanart']);

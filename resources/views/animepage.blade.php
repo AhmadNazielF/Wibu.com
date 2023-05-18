@@ -4,11 +4,11 @@
  <!--animepage-->
  <div class="anime-page_layout">
   <div class="block_karakter">
-    <p id="title" >{{$anime->judul}}</p>
+    <div class="kategori_teks">{{$anime->judul}}</div>
   </div>
   <div class="anime_page">
       <div class="anime_informasi-layout">
-          <div class="anime_foto"><img src="foto/OPM.jpeg" alt="" width="300" height="204"></div>
+          <div class="anime_foto"><img src="{{asset($anime->image)}}" alt="" width="300" height="204"></div>
           <div class="anime_informasi">
               <div class="anime_informasi-content">
                   <div class="anime_informasi_content-info">Judul Alternatif :</div>
@@ -24,15 +24,15 @@
               </div>  
               <div class="anime_informasi-content">
                   <div class="anime_informasi_content-info">Ratings :</div>
-                  <div class="anime_informasi-content-info-">{{$anime->ratings}}</div> 
+                  <div class="anime_informasi-content-info-">{{$anime->rating}}</div> 
               </div>  
               <div class="anime_informasi-content">
                   <div class="anime_informasi_content-info">Jumlah episode :</div>
-                  <div class="anime_informasi-content-info-">{{$anime->jumlah_episode}}</div> 
+                  <div class="anime_informasi-content-info-">{{$anime->jumlah_episode}} episodes</div> 
               </div>  
               <div class="anime_informasi-content">
                   <div class="anime_informasi_content-info">Studio :</div>
-                  <div class="anime_informasi-content-info-">{{$anime->Sstudio}}</div> 
+                  <div class="anime_informasi-content-info-">{{$anime->studio}}</div> 
               </div>  
               <div class="anime_informasi-content">
                   <div class="anime_informasi_content-info">Tahun tayang :</div>
@@ -43,7 +43,7 @@
   </div>
   <div class="sinopsis">
       <H4>Sinopsis :</H4>
-      {{$anime->sinopsis}}
+      <p>{{$anime->sinopsis}}</p>
     </div>
 
   <div class="galery">
@@ -56,78 +56,17 @@
       <div class="galery_bawah">
         <div class="block"></div>
         <div class="galery_bawah-content">
-          <a href="/karakterpage" class="poster">
-              <div class="poster_foto-karakter"><img src="foto/Saitama.jpeg" alt="" width="173" height="166"></div>
+          @if ($character)
+          @foreach ($character as $character)
+          <a href="{{'/karakterpage/'.$character->slug}}" class="poster">
+              <div class="poster_foto-karakter"><img src="{{asset($character->image)}}" alt="" width="173" height="166"></div>
               <div class="poster_teks">
-                <div class="poster_foto-karakter-teks__nama">Nama : Saitama</div>
-                <div class="poster_foto-karakter-teks__role">Role : Main Karakter</div>
+                <div class="poster_foto-karakter-teks__nama">Nama : {{$character->nama}}</div>
+                <div class="poster_foto-karakter-teks__role">Role : {{$character->role}}</div>
               </div>
           </a>
-          <a href="#" class="poster">
-              <div class="poster_foto-karakter"></div>
-              <div class="poster_teks">
-                <div class="poster_foto-karakter-teks__nama">Nama</div>
-                <div class="poster_foto-karakter-teks__role">Role</div>
-              </div>
-          </a>
-          <a href="#" class="poster">
-              <div class="poster_foto-karakter"></div>
-              <div class="poster_teks">
-                <div class="poster_foto-karakter-teks__nama">Nama</div>
-                <div class="poster_foto-karakter-teks__role">Role</div>
-              </div>
-          </a>
-          <a href="#" class="poster">
-              <div class="poster_foto-karakter"></div>
-              <div class="poster_teks">
-                <div class="poster_foto-karakter-teks__nama">Nama</div>
-                <div class="poster_foto-karakter-teks__role">Role</div>
-              </div>
-          </a>
-          <a href="#" class="poster">
-              <div class="poster_foto-karakter"></div>
-              <div class="poster_teks">
-                <div class="poster_foto-karakter-teks__nama">Nama</div>
-                <div class="poster_foto-karakter-teks__role">Role</div>
-              </div>
-          </a>
-        </div>
-        <div class="galery_bawah-content">
-          <a href="#" class="poster">
-              <div class="poster_foto-karakter"></div>
-              <div class="poster_teks">
-                <div class="poster_foto-karakter-teks__nama">Nama</div>
-                <div class="poster_foto-karakter-teks__role">Role</div>
-              </div>
-          </a>
-          <a href="#" class="poster">
-              <div class="poster_foto-karakter"></div>
-              <div class="poster_teks">
-                <div class="poster_foto-karakter-teks__nama">Nama</div>
-                <div class="poster_foto-karakter-teks__role">Role</div>
-              </div>
-          </a>
-          <a href="#" class="poster">
-              <div class="poster_foto-karakter"></div>
-              <div class="poster_teks">
-                <div class="poster_foto-karakter-teks__nama">Nama</div>
-                <div class="poster_foto-karakter-teks__role">Role</div>
-              </div>
-          </a>
-          <a href="#" class="poster">
-              <div class="poster_foto-karakter"></div>
-              <div class="poster_teks">
-                <div class="poster_foto-karakter-teks__nama">Nama</div>
-                <div class="poster_foto-karakter-teks__role">Role</div>
-              </div>
-          </a>
-          <a href="#" class="poster">
-              <div class="poster_foto-karakter"></div>
-              <div class="poster_teks">
-                <div class="poster_foto-karakter-teks__nama">Nama</div>
-                <div class="poster_foto-karakter-teks__role">Role</div>
-              </div>
-          </a>
+          @endforeach
+          @endif
         </div>
       </div>
     </div>    
