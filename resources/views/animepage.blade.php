@@ -4,7 +4,7 @@
  <!--animepage-->
  <div class="anime-page_layout">
   <div class="block_karakter">
-    <div class="kategori_teks">One Punch Man</div>
+    <p id="title" >{{$anime->judul}}</p>
   </div>
   <div class="anime_page">
       <div class="anime_informasi-layout">
@@ -12,39 +12,38 @@
           <div class="anime_informasi">
               <div class="anime_informasi-content">
                   <div class="anime_informasi_content-info">Judul Alternatif :</div>
-                  <div class="anime_informasi-content-info-">-</div> 
+                  <div class="anime_informasi-content-info-">{{$anime->judul_alternatif}}</div> 
               </div>  
               <div class="anime_informasi-content">
                   <div class="anime_informasi_content-info">Genre :</div>
-                  <div class="anime_informasi-content-info-">Action,Comedy</div> 
+                  <div class="anime_informasi-content-info-">{{$anime->genre}}</div> 
               </div>  
               <div class="anime_informasi-content">
                   <div class="anime_informasi_content-info">Status :</div>
-                  <div class="anime_informasi-content-info-">On Going</div> 
+                  <div class="anime_informasi-content-info-">{{$anime->status}}</div> 
               </div>  
               <div class="anime_informasi-content">
                   <div class="anime_informasi_content-info">Ratings :</div>
-                  <div class="anime_informasi-content-info-">8,7/10</div> 
+                  <div class="anime_informasi-content-info-">{{$anime->ratings}}</div> 
               </div>  
               <div class="anime_informasi-content">
                   <div class="anime_informasi_content-info">Jumlah episode :</div>
-                  <div class="anime_informasi-content-info-">24</div> 
+                  <div class="anime_informasi-content-info-">{{$anime->jumlah_episode}}</div> 
               </div>  
               <div class="anime_informasi-content">
                   <div class="anime_informasi_content-info">Studio :</div>
-                  <div class="anime_informasi-content-info-">MadHouse, Mappa</div> 
+                  <div class="anime_informasi-content-info-">{{$anime->Sstudio}}</div> 
               </div>  
               <div class="anime_informasi-content">
                   <div class="anime_informasi_content-info">Tahun tayang :</div>
-                  <div class="anime_informasi-content-info-">2015</div> 
+                  <div class="anime_informasi-content-info-">{{$anime->tahun_tayang}}</div> 
               </div>  
           </div>
   </div>
   </div>
   <div class="sinopsis">
       <H4>Sinopsis :</H4>
-      <p>Saitama, yang pada awalnya terlihat tidak istimewa, memiliki hobi yang cukup unik yaitu menjadi seorang pahlawan. Untuk mengejar mimpi masa kecilnya, Saitama berlatih tanpa henti selama tiga tahun, yang menyebabkan dia kehilangan semua rambutnya dalam proses tersebut. Sekarang, Saitama sangat kuat sehingga dia dapat mengalahkan setiap musuh hanya dengan satu pukulan. Namun, karena tidak ada orang yang mampu menandingi kekuatannya, Saitama mengalami masalah yang tidak terduga yaitu dia tidak lagi bisa menikmati sensasi pertarungan dan menjadi sangat bosan</p>
-      <p>Suatu hari, Saitama menarik perhatian cyborg berusia 19 tahun bernama Genos, yang menyaksikan kekuatannya dan ingin menjadi murid Saitama. Genos mengusulkan agar mereka bergabung dengan Asosiasi Pahlawan untuk menjadi pahlawan bersertifikat yang akan diakui kontribusinya yang positif bagi masyarakat. Saitama, yang terkejut bahwa tidak ada yang tahu siapa dia, dengan cepat setuju. Bertemu dengan sekutu baru dan menghadapi musuh baru, Saitama memulai perjalanan baru sebagai anggota Asosiasi Pahlawan untuk merasakan sensasi pertarungan yang pernah dia rasakan.</p>
+      {{$anime->sinopsis}}
     </div>
 
   <div class="galery">

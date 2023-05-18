@@ -13,7 +13,7 @@ class AnimePageController extends Controller
 
     public function index($slug){
         $anime=anime::where('slug','LIKE',$slug)->first();
-        DB::table('anime')->where('slug','LIKE',$slug)->increment('click');
+        DB::table('animes')->where('slug','LIKE',$slug)->increment('click');
         return view('animepage', [
            'title' => 'anime',
            'anime' => $anime
@@ -40,7 +40,7 @@ class AnimePageController extends Controller
 
        anime::create([
         'judul'=>$request['judul'],
-        'slug' => strtolower(str_replace(' ', '_', $request->nama)),
+        'slug' => strtolower(str_replace(' ', '_', $request->judul)),
         'judul_alternatif'=>$request['judul_alternatif'],
         'genre'=>$request['genre'],
         'status'=>$request['status'],
